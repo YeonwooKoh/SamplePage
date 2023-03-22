@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>주문 목록</title>
+</head>
+<body>
+<!--가격도 넣어야 하는데... FK 하기엔 시간이 너무 없다-->
+<!--orderList-->
+<table>
+    <tr>
+        <th>주문 상품 이름</th>
+        <th>주문 상품 갯수</th>
+    </tr>
+    <tr th:each="order:${orderList}">
+        <td th:text="${order.productName}"></td>
+        <td th:text="${order.orderAmount}"></td>
+    </tr>
+
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 주문 페이지</title>
+</head>
+<body>
+<form action="/purchasePro" method="post">
+
+    <input type="hidden" th:value="${selectedProduct.productSeq}" name="productSeq">
+    상품 이름 <span th:value="${selectedProduct.productName}"></span><br>
+    상품 가격 <span th:value="${selectedProduct.productPrice}"></span><br>
+    <!--수량이 바뀌면 가격도 바뀌는 것 생각해보기-->
+    수량 선택 <input type="text" name="orderAmount"><br>
+    <input type="submit" value="주문 완료">
+
+</form>
+
+</body>
+</html>

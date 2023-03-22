@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>구매자 로그인</title>
+</head>
+<body>
+
+<p th:text ="${session.loginId}">님 환영합니다!</p>
+
+<!--시간되면 th로-->
+<a href="customer/goShopping">쇼핑하기</a><br>
+<a href="customer/goOrderList">주문목록</a><br>
+<a href="/user/logout">로그아웃</a>
+
+</body>
+</html>

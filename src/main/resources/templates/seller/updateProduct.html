@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 등록</title>
+</head>
+<body>
+
+<form action="/seller/updateProductPro" method="post">
+
+  <input type="hidden" th:value="${updateProduct.productSeq}" name="productSeq">
+  상품 이름 <input type="text" th:value="${updateProduct.productName}" name="productName"><br>
+  상품 가격 <input type="text" th:value="${updateProduct.productPrice}" name="productPrice"><br>
+  상품 수량 <input type="text" th:value="${updateProduct.productAmount}" name="productAmount"><br>
+  <input type="submit" value="수정"><br>
+  <!--th if문으로 addProduct와 updateProduct를 합칠 수 있는 코드 생각해보기-->
+</form>
+
+
+
+</body>
+</html>

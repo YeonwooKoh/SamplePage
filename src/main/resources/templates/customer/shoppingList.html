@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>aa 쇼핑몰</title>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>상품 이름</th>
+    <th>상품 가격</th>
+    <th>재고 수량</th>
+    <th></th>
+  </tr>
+  <tr th:each="product:${shoppingList}">
+    <td th:text="${product.productName}"></td>
+    <td th:text="${product.productPrice}"></td>
+    <td th:text="${product.productAmount}"></td>
+    <td>
+      <a th:href="@{|/customer/purchase/${product.productSeq}|}">구매</a>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>
